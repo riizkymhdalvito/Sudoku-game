@@ -1,0 +1,22 @@
+#ifndef BOARD_H
+#define BOARD_H
+
+#include <vector>
+
+class Board {
+private:
+    std::vector<std::vector<int>> grid;
+public:
+    Board();
+    void initialize(int difficulty);
+    void display();
+    bool isValidMove(int row, int col, int num);
+    bool isInRow(int row, int num);
+    bool isInCol(int col, int num);
+    bool isInBox(int startRow, int startCol, int num);
+    bool isFull();
+    void placeNumber(int row, int col, int num);
+    int getNumber(int row, int col);
+};
+
+#endif // BOARD_H
