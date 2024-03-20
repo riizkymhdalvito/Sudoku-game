@@ -1,0 +1,18 @@
+#ifndef GAMEMANAGER_H
+#define GAMEMANAGER_H
+
+#include "Player.h"
+#include "Board.h"
+
+class GameManager {
+private:
+    Player player;
+    Board board;
+public:
+    GameManager(std::string playerName);
+    void startGame();
+    void chooseDifficulty();
+    bool isValidInput(int row, int col, int num);
+};
+
+#endif // GAMEMANAGER_H
